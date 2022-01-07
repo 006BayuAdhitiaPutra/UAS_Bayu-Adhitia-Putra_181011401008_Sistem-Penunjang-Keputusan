@@ -3,34 +3,34 @@ from nltk.stem import PorterStemmer
 
 porter = PorterStemmer()
 
-tkns = ['study','studying','studies','studied']
+tns = ['eat','eating','eats','ate']
 
-for token in tkns:
+for token in ts:
     print(token + " : " + porter.stem(token))
-study : studi
-studying : studi
-studies : studi
-studied : studi
+eat : makan
+eating :makan
+eates : makan
+ate : makan
 from nltk.stem import SnowballStemmer
 
 snowball = SnowballStemmer(language='english')
 
-for token in tkns:
+for token in ts:
     print(token + " : " + snowball.stem(token))
-study : studi
-studying : studi
-studies : studi
-studied : studi
+eat : makan
+eating :makan
+eates : makan
+ate : makan
 from nltk.stem import LancasterStemmer
 
 lancaster = LancasterStemmer()
 
-for token in tkns:
+for token in ts:
     print(token + " : " + lancaster.stem(token))
-study : study
-studying : study
-studies : study
-studied : study
+eat : makan
+eating :makan
+eates : makan
+ate : makan
 nltk.download('wordnet')
 [nltk_data] Downloading package wordnet to /Users/bsi-00/nltk_data...
 [nltk_data]   Package wordnet is already up-to-date!
@@ -41,11 +41,10 @@ lemmatizer = WordNetLemmatizer()
 
 for token in tkns:
     print(token + " :  " + lemmatizer.lemmatize(token))
-study :  study
-studying :  studying
-studies :  study
-studied :  studied
-
+eat : makan
+eating :makan
+eates : makan
+ate : makan
 from nltk.stem import PorterStemmer
 
 porter = PorterStemmer()
